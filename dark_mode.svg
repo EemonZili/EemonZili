@@ -47,6 +47,6 @@ text, tspan { white-space: pre; }
 <tspan x="366" y="317" class="cc">. </tspan><tspan class="key">Blog</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">eemonzili.github.io</tspan>
 <tspan x="366" y="336" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">EemonZili</tspan>
 <tspan x="366" y="374">- GitHub Stats ---------------------------------------------</tspan>
-<tspan x="366" y="393" class="cc">. </tspan><tspan class="key">Repos</tspan>: <tspan class="value">5</tspan><tspan class="cc"> | </tspan><tspan class="key">Commits</tspan>: <tspan class="value">725</tspan>
+<tspan x="366" y="393" class="cc">. </tspan><tspan class="key">Repos</tspan>: <tspan class="value">5</tspan><tspan class="cc"> | </tspan><tspan class="key">Commits</tspan>: <tspan class="value">37</tspan>
 </text>
 </svg>
