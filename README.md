@@ -16,9 +16,8 @@
 ## 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗼𝗻
 
 [![Campus Review](https://svg.bookmark.style/api?url=https://github.com/EemonZili/AHUComment&mode=light&style=horizontal)](https://github.com/EemonZili/AHUComment)
-[![Blog](https://svg.bookmark.style/api?url=https://github.com/EemonZili/EemonZili.github.io&mode=dark&style=horizontal)](https://eemonzili.github.io/)
-
-[思想银河](https://soular.top/) — turns answers under one question into a map of viewpoints.
+[![思想银河](https://svg.bookmark.style/api?url=https://github.com/Duang777/soular&mode=dark&style=horizontal)](https://soular.top/)
+[![Blog](https://svg.bookmark.style/api?url=https://github.com/EemonZili/EemonZili.github.io&mode=light&style=horizontal)](https://eemonzili.github.io/)
 
 ## 𝗠𝘆 𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸
 
