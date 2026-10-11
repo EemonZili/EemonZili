@@ -1,32 +1,547 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="135" viewBox="0 0 540 135">
-<defs>
-  <style>@font-face{font-family:'Noto Sans SC';font-weight:700;src:url(data:font/ttf;base64,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) format('truetype')}@font-face{font-family:'Noto Sans SC';font-weight:500;src:url(data:font/ttf;base64,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) format('truetype')}
-    .song{font:700 30px 'Noto Sans SC',sans-serif}
-    .artist{font:500 15px 'Noto Sans SC',sans-serif}
-    .bar{opacity:.9;transform-box:fill-box;transform-origin:center bottom;animation:pulse ease-out infinite alternate}
-    @keyframes pulse{0%{transform:scaleY(.42)}100%{transform:scaleY(1)}}
-  </style>
-  <linearGradient id="song" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#F5F7FF"/><stop offset="1" stop-color="#B9C9FF"/>
-  </linearGradient>
-  <linearGradient id="artist" x1="1" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#F5F7FF"/><stop offset="1" stop-color="#9AACE8"/>
-  </linearGradient>
-  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0B1233" flood-opacity=".55"/>
-  </filter>
-  <clipPath id="card"><rect width="540" height="135" rx="10"/></clipPath>
-</defs>
-<a href="https://music.apple.com/hk/search?term=%E5%91%A8%E6%9D%B0%E4%BC%A6%20%E6%99%B4%E5%A4%A9">
-<g clip-path="url(#card)">
-  <rect width="540" height="135" fill="#1B2550"/>
-  <rect x="-20" y="-20" width="180" height="180" fill="#4C6FFF" opacity=".55" filter="url(#shadow)"/>
-  <rect width="540" height="135" fill="#000" fill-opacity=".28"/>
-  <rect x="16" y="16" width="103" height="103" rx="8" fill="#4C6FFF" filter="url(#shadow)"/>
-  <text x="336" y="58" text-anchor="middle" class="song" fill="url(#song)">晴天</text>
-  <text x="336" y="82" text-anchor="middle" class="artist" fill="url(#artist)">周杰伦</text>
-  <rect x="148.00" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.572s;animation-delay:0.000s"/><rect x="153.10" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.544s;animation-delay:-0.003s"/><rect x="158.20" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.624s;animation-delay:-0.006s"/><rect x="163.30" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.532s;animation-delay:-0.009s"/><rect x="168.40" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.606s;animation-delay:-0.012s"/><rect x="173.50" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.579s;animation-delay:-0.015s"/><rect x="178.60" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.529s;animation-delay:-0.018s"/><rect x="183.70" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.601s;animation-delay:-0.021s"/><rect x="188.80" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.526s;animation-delay:-0.024s"/><rect x="193.90" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.589s;animation-delay:-0.027s"/><rect x="199.00" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.531s;animation-delay:-0.030s"/><rect x="204.10" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.535s;animation-delay:-0.033s"/><rect x="209.20" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.588s;animation-delay:-0.036s"/><rect x="214.30" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.652s;animation-delay:-0.039s"/><rect x="219.40" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.540s;animation-delay:-0.042s"/><rect x="224.50" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.556s;animation-delay:-0.045s"/><rect x="229.60" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.620s;animation-delay:-0.048s"/><rect x="234.70" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.672s;animation-delay:-0.051s"/><rect x="239.80" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.612s;animation-delay:-0.054s"/><rect x="244.90" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.583s;animation-delay:-0.057s"/><rect x="250.00" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.676s;animation-delay:-0.060s"/><rect x="255.10" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.527s;animation-delay:-0.063s"/><rect x="260.20" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.657s;animation-delay:-0.066s"/><rect x="265.30" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.566s;animation-delay:-0.069s"/><rect x="270.40" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.543s;animation-delay:-0.072s"/><rect x="275.50" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.539s;animation-delay:-0.075s"/><rect x="280.60" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.569s;animation-delay:-0.078s"/><rect x="285.70" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.651s;animation-delay:-0.081s"/><rect x="290.80" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.549s;animation-delay:-0.084s"/><rect x="295.90" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.613s;animation-delay:-0.087s"/><rect x="301.00" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.622s;animation-delay:-0.090s"/><rect x="306.10" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.580s;animation-delay:-0.093s"/><rect x="311.20" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.608s;animation-delay:-0.096s"/><rect x="316.30" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.530s;animation-delay:-0.099s"/><rect x="321.40" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.530s;animation-delay:-0.102s"/><rect x="326.50" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.553s;animation-delay:-0.105s"/><rect x="331.60" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.629s;animation-delay:-0.108s"/><rect x="336.70" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.588s;animation-delay:-0.111s"/><rect x="341.80" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.570s;animation-delay:-0.114s"/><rect x="346.90" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.614s;animation-delay:-0.117s"/><rect x="352.00" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.593s;animation-delay:-0.120s"/><rect x="357.10" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.568s;animation-delay:-0.123s"/><rect x="362.20" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.647s;animation-delay:-0.126s"/><rect x="367.30" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.632s;animation-delay:-0.129s"/><rect x="372.40" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.559s;animation-delay:-0.132s"/><rect x="377.50" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.612s;animation-delay:-0.135s"/><rect x="382.60" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.604s;animation-delay:-0.138s"/><rect x="387.70" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.660s;animation-delay:-0.141s"/><rect x="392.80" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.637s;animation-delay:-0.144s"/><rect x="397.90" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.566s;animation-delay:-0.147s"/><rect x="403.00" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.677s;animation-delay:-0.150s"/><rect x="408.10" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.539s;animation-delay:-0.153s"/><rect x="413.20" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.587s;animation-delay:-0.156s"/><rect x="418.30" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.641s;animation-delay:-0.159s"/><rect x="423.40" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.544s;animation-delay:-0.162s"/><rect x="428.50" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.598s;animation-delay:-0.165s"/><rect x="433.60" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.526s;animation-delay:-0.168s"/><rect x="438.70" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.627s;animation-delay:-0.171s"/><rect x="443.80" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.642s;animation-delay:-0.174s"/><rect x="448.90" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.612s;animation-delay:-0.177s"/><rect x="454.00" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.660s;animation-delay:-0.180s"/><rect x="459.10" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.570s;animation-delay:-0.183s"/><rect x="464.20" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.631s;animation-delay:-0.186s"/><rect x="469.30" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.615s;animation-delay:-0.189s"/><rect x="474.40" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.613s;animation-delay:-0.192s"/><rect x="479.50" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.593s;animation-delay:-0.195s"/><rect x="484.60" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.654s;animation-delay:-0.198s"/><rect x="489.70" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.671s;animation-delay:-0.201s"/><rect x="494.80" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.596s;animation-delay:-0.204s"/><rect x="499.90" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.626s;animation-delay:-0.207s"/><rect x="505.00" y="90" width="3.4" height="32" rx="1.6" fill="#4C6FFF" class="bar" style="animation-duration:0.530s;animation-delay:-0.210s"/><rect x="510.10" y="90" width="3.4" height="32" rx="1.6" fill="#2C4DB5" class="bar" style="animation-duration:0.632s;animation-delay:-0.213s"/><rect x="515.20" y="90" width="3.4" height="32" rx="1.6" fill="#E7EDFF" class="bar" style="animation-duration:0.624s;animation-delay:-0.216s"/><rect x="520.30" y="90" width="3.4" height="32" rx="1.6" fill="#9DB4FF" class="bar" style="animation-duration:0.679s;animation-delay:-0.219s"/>
-</g>
-</a>
-<rect x=".5" y=".5" width="539" height="134" rx="10" fill="none" stroke="#ffffff"/>
+<svg 
+    viewBox="0 0 540 135" 
+    preserveAspectRatio="xMidYMid meet" 
+    style="width: 100%; height: auto; display: block; max-width: 540px;"
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    
+    <style>
+        .bar {
+            /* shape-rendering: crispEdges; Removed for smooth path rendering */
+            opacity: 0.85;
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation-name: pulse, barcolor;
+            animation-iteration-count: infinite, infinite;
+            animation-direction: alternate, normal;
+            animation-timing-function: ease-out, linear;
+        }
+
+        @keyframes pulse {
+            0%   { transform: scaleY(0.50); }
+            100% { transform: scaleY(1); }
+        }
+
+        @keyframes barcolor {
+  0% { fill: rgb(67,196,196); }
+  25% { fill: rgb(72,195,195); }
+  50% { fill: rgb(72,195,195); }
+  75% { fill: rgb(72,195,195); }
+  100% { fill: rgb(67,196,196); }
+}
+.bar:nth-child(1) { animation-duration: 678ms, 45000ms; animation-delay: -3ms, -0ms; }
+.bar:nth-child(2) { animation-duration: 651ms, 45000ms; animation-delay: -6ms, -562ms; }
+.bar:nth-child(3) { animation-duration: 725ms, 45000ms; animation-delay: -10ms, -1125ms; }
+.bar:nth-child(4) { animation-duration: 703ms, 45000ms; animation-delay: -13ms, -1687ms; }
+.bar:nth-child(5) { animation-duration: 634ms, 45000ms; animation-delay: -17ms, -2250ms; }
+.bar:nth-child(6) { animation-duration: 625ms, 45000ms; animation-delay: -20ms, -2812ms; }
+.bar:nth-child(7) { animation-duration: 655ms, 45000ms; animation-delay: -24ms, -3375ms; }
+.bar:nth-child(8) { animation-duration: 719ms, 45000ms; animation-delay: -27ms, -3937ms; }
+.bar:nth-child(9) { animation-duration: 700ms, 45000ms; animation-delay: -31ms, -4500ms; }
+.bar:nth-child(10) { animation-duration: 630ms, 45000ms; animation-delay: -34ms, -5062ms; }
+.bar:nth-child(11) { animation-duration: 682ms, 45000ms; animation-delay: -38ms, -5625ms; }
+.bar:nth-child(12) { animation-duration: 673ms, 45000ms; animation-delay: -41ms, -6187ms; }
+.bar:nth-child(13) { animation-duration: 630ms, 45000ms; animation-delay: -45ms, -6750ms; }
+.bar:nth-child(14) { animation-duration: 648ms, 45000ms; animation-delay: -48ms, -7312ms; }
+.bar:nth-child(15) { animation-duration: 617ms, 45000ms; animation-delay: -52ms, -7874ms; }
+.bar:nth-child(16) { animation-duration: 611ms, 45000ms; animation-delay: -55ms, -8437ms; }
+.bar:nth-child(17) { animation-duration: 640ms, 45000ms; animation-delay: -58ms, -9000ms; }
+.bar:nth-child(18) { animation-duration: 639ms, 45000ms; animation-delay: -62ms, -9562ms; }
+.bar:nth-child(19) { animation-duration: 688ms, 45000ms; animation-delay: -65ms, -10125ms; }
+.bar:nth-child(20) { animation-duration: 683ms, 45000ms; animation-delay: -69ms, -10687ms; }
+.bar:nth-child(21) { animation-duration: 717ms, 45000ms; animation-delay: -72ms, -11250ms; }
+.bar:nth-child(22) { animation-duration: 595ms, 45000ms; animation-delay: -76ms, -11812ms; }
+.bar:nth-child(23) { animation-duration: 601ms, 45000ms; animation-delay: -79ms, -12375ms; }
+.bar:nth-child(24) { animation-duration: 607ms, 45000ms; animation-delay: -83ms, -12937ms; }
+.bar:nth-child(25) { animation-duration: 714ms, 45000ms; animation-delay: -86ms, -13500ms; }
+.bar:nth-child(26) { animation-duration: 603ms, 45000ms; animation-delay: -90ms, -14062ms; }
+.bar:nth-child(27) { animation-duration: 696ms, 45000ms; animation-delay: -93ms, -14625ms; }
+.bar:nth-child(28) { animation-duration: 644ms, 45000ms; animation-delay: -97ms, -15187ms; }
+.bar:nth-child(29) { animation-duration: 695ms, 45000ms; animation-delay: -100ms, -15749ms; }
+.bar:nth-child(30) { animation-duration: 599ms, 45000ms; animation-delay: -104ms, -16312ms; }
+.bar:nth-child(31) { animation-duration: 595ms, 45000ms; animation-delay: -107ms, -16875ms; }
+.bar:nth-child(32) { animation-duration: 650ms, 45000ms; animation-delay: -111ms, -17437ms; }
+.bar:nth-child(33) { animation-duration: 630ms, 45000ms; animation-delay: -114ms, -18000ms; }
+.bar:nth-child(34) { animation-duration: 655ms, 45000ms; animation-delay: -117ms, -18562ms; }
+.bar:nth-child(35) { animation-duration: 624ms, 45000ms; animation-delay: -121ms, -19125ms; }
+.bar:nth-child(36) { animation-duration: 601ms, 45000ms; animation-delay: -124ms, -19687ms; }
+.bar:nth-child(37) { animation-duration: 676ms, 45000ms; animation-delay: -128ms, -20250ms; }
+.bar:nth-child(38) { animation-duration: 613ms, 45000ms; animation-delay: -131ms, -20812ms; }
+.bar:nth-child(39) { animation-duration: 619ms, 45000ms; animation-delay: -135ms, -21375ms; }
+.bar:nth-child(40) { animation-duration: 724ms, 45000ms; animation-delay: -138ms, -21937ms; }
+.bar:nth-child(41) { animation-duration: 620ms, 45000ms; animation-delay: -142ms, -22500ms; }
+.bar:nth-child(42) { animation-duration: 690ms, 45000ms; animation-delay: -145ms, -23062ms; }
+.bar:nth-child(43) { animation-duration: 658ms, 45000ms; animation-delay: -149ms, -23625ms; }
+.bar:nth-child(44) { animation-duration: 676ms, 45000ms; animation-delay: -152ms, -24187ms; }
+.bar:nth-child(45) { animation-duration: 600ms, 45000ms; animation-delay: -156ms, -24750ms; }
+.bar:nth-child(46) { animation-duration: 708ms, 45000ms; animation-delay: -159ms, -25312ms; }
+.bar:nth-child(47) { animation-duration: 659ms, 45000ms; animation-delay: -163ms, -25874ms; }
+.bar:nth-child(48) { animation-duration: 602ms, 45000ms; animation-delay: -166ms, -26437ms; }
+.bar:nth-child(49) { animation-duration: 598ms, 45000ms; animation-delay: -169ms, -27000ms; }
+.bar:nth-child(50) { animation-duration: 658ms, 45000ms; animation-delay: -173ms, -27562ms; }
+.bar:nth-child(51) { animation-duration: 693ms, 45000ms; animation-delay: -176ms, -28125ms; }
+.bar:nth-child(52) { animation-duration: 707ms, 45000ms; animation-delay: -180ms, -28687ms; }
+.bar:nth-child(53) { animation-duration: 649ms, 45000ms; animation-delay: -183ms, -29250ms; }
+.bar:nth-child(54) { animation-duration: 656ms, 45000ms; animation-delay: -187ms, -29812ms; }
+.bar:nth-child(55) { animation-duration: 612ms, 45000ms; animation-delay: -190ms, -30375ms; }
+.bar:nth-child(56) { animation-duration: 700ms, 45000ms; animation-delay: -194ms, -30937ms; }
+.bar:nth-child(57) { animation-duration: 615ms, 45000ms; animation-delay: -197ms, -31499ms; }
+.bar:nth-child(58) { animation-duration: 661ms, 45000ms; animation-delay: -201ms, -32062ms; }
+.bar:nth-child(59) { animation-duration: 689ms, 45000ms; animation-delay: -204ms, -32625ms; }
+.bar:nth-child(60) { animation-duration: 629ms, 45000ms; animation-delay: -208ms, -33187ms; }
+.bar:nth-child(61) { animation-duration: 685ms, 45000ms; animation-delay: -211ms, -33750ms; }
+.bar:nth-child(62) { animation-duration: 622ms, 45000ms; animation-delay: -215ms, -34312ms; }
+.bar:nth-child(63) { animation-duration: 675ms, 45000ms; animation-delay: -218ms, -34875ms; }
+.bar:nth-child(64) { animation-duration: 675ms, 45000ms; animation-delay: -222ms, -35437ms; }
+.bar:nth-child(65) { animation-duration: 690ms, 45000ms; animation-delay: -225ms, -36000ms; }
+.bar:nth-child(66) { animation-duration: 694ms, 45000ms; animation-delay: -228ms, -36562ms; }
+.bar:nth-child(67) { animation-duration: 642ms, 45000ms; animation-delay: -232ms, -37125ms; }
+.bar:nth-child(68) { animation-duration: 594ms, 45000ms; animation-delay: -235ms, -37687ms; }
+.bar:nth-child(69) { animation-duration: 681ms, 45000ms; animation-delay: -239ms, -38250ms; }
+.bar:nth-child(70) { animation-duration: 671ms, 45000ms; animation-delay: -242ms, -38812ms; }
+.bar:nth-child(71) { animation-duration: 639ms, 45000ms; animation-delay: -246ms, -39375ms; }
+.bar:nth-child(72) { animation-duration: 599ms, 45000ms; animation-delay: -249ms, -39937ms; }
+.bar:nth-child(73) { animation-duration: 615ms, 45000ms; animation-delay: -253ms, -40500ms; }
+.bar:nth-child(74) { animation-duration: 705ms, 45000ms; animation-delay: -256ms, -41062ms; }
+.bar:nth-child(75) { animation-duration: 668ms, 45000ms; animation-delay: -260ms, -41625ms; }
+.bar:nth-child(76) { animation-duration: 654ms, 45000ms; animation-delay: -263ms, -42187ms; }
+.bar:nth-child(77) { animation-duration: 681ms, 45000ms; animation-delay: -267ms, -42750ms; }
+.bar:nth-child(78) { animation-duration: 664ms, 45000ms; animation-delay: -270ms, -43312ms; }
+.bar:nth-child(79) { animation-duration: 612ms, 45000ms; animation-delay: -274ms, -43875ms; }
+.bar:nth-child(80) { animation-duration: 629ms, 45000ms; animation-delay: -277ms, -44437ms; }
+    </style>
+
+    <foreignObject width="540" height="135" x="0" y="0">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container blur-bg blur-dark">
+            <style>
+                :root {
+                    /* Colors (runtime — from request params + palette extraction) */
+                    --background-color: #181414;
+                    --border-color: #ffffff;
+                    --song-color-1: rgb(67, 196, 196);
+                    --song-color-2: rgb(72, 195, 195);
+                    --bar-color-1: rgb(67, 196, 196);
+
+                    /* Dimensions, layout (all from config.py via orchestrator) */
+                    --border-radius: 5px;
+                    --album-size: 121px;
+                    --widget-border-width: 1px;
+                    --widget-padding-top: 7px;
+                    --widget-padding-right: 8px;
+                    --widget-padding-bottom: 7px;
+                    --widget-padding-left: 7px;
+                    --art-content-gap: 7px;
+                    --eq-spacer-height: 45px;
+                    --eq-spacer-margin-top: 15px;
+                    --artist-margin-top: 4px;
+
+                    /* Blur (from config.py) */
+                    --blur-amount: 20px;
+                    --blur-overlay-opacity: 0.7;
+
+                    /* Audio-reactive (computed at render time) */
+                    --beat-duration: 555ms;
+                    --glow-intensity: 0.372;
+                    --bar-glow: rgba(72, 195, 195, var(--glow-intensity));
+                }
+
+                * {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--border-radius);
+                    padding: var(--widget-padding-top) var(--widget-padding-right) var(--widget-padding-bottom) var(--widget-padding-left);
+                    overflow: hidden;
+                    
+/* Dark theme - uses customizable background and border */
+background-color: var(--background-color);
+border: 1px solid var(--border-color);
+
+                }
+
+                /* Blurred background styles */
+                .container.blur-bg {
+                    background: transparent;
+                    border: var(--widget-border-width) solid var(--border-color);
+                }
+
+                .blur-background {
+                    display: none;
+                }
+
+                .container.blur-bg .blur-background {
+                    display: block;
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    right: -20px;
+                    bottom: -20px;
+                    z-index: -2;
+                    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAIAAAAxBA+LAAAI6UlEQVR4nO3VMQEAIAzAMEAZ4icMGRxNFPTrvjMLAKrO7wAA+MkIAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgBW2QN5bAZ4LHLMIgAAAABJRU5ErkJggg==");
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(var(--blur-amount)) saturate(1.2);
+                    transform: scale(1.1);
+                }
+
+                .blur-overlay {
+                    display: none;
+                }
+
+                .container.blur-bg .blur-overlay {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    border-radius: var(--border-radius);
+                }
+
+                .container.blur-bg.blur-dark .blur-overlay {
+                    background: rgba(0, 0, 0, var(--blur-overlay-opacity));
+                }
+
+                .container.blur-bg.blur-light .blur-overlay {
+                    background: rgba(255, 255, 255, var(--blur-overlay-opacity));
+                }
+
+                /* Text shadow for blur backgrounds (keeps default gradient colors) */
+                .container.blur-bg.blur-dark .song-text,
+                .container.blur-bg.blur-dark .artist-text,
+                .container.blur-bg.blur-dark .status {
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.9))
+                            drop-shadow(0 0 3px rgba(0,0,0,0.6));
+                }
+
+                .container.blur-bg.blur-light .song-text,
+                .container.blur-bg.blur-light .artist-text,
+                .container.blur-bg.blur-light .status {
+                    filter: brightness(0.55)
+                            drop-shadow(0 0 1px rgba(255,255,255,0.9))
+                            drop-shadow(0 0 3px rgba(255,255,255,0.5));
+                }
+
+                .main {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    gap: var(--art-content-gap);
+                }
+
+                .art {
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .art:hover .cover {
+                    transform: scale(1.02);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+
+                .content {
+                    flex: 1;
+                    min-width: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                /* --- Song / Artist clip containers --- */
+                .song, .artist {
+                    width: 100%;
+                    overflow: hidden;
+                    text-align: center;
+                }
+
+                .song.has-marquee,
+                .artist.has-marquee {
+                    text-align: left;
+                }
+
+                .artist {
+                    margin-top: var(--artist-margin-top);
+                }
+
+                /* --- Inner text spans (carry gradient + scroll) --- */
+                .song-text {
+                    display: inline-block;
+                    white-space: nowrap;
+                    font-size: 22px;
+                    font-weight: 500;
+                    background: linear-gradient(125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    background-position: 0% 50%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 15s ease infinite;
+                    transition: opacity 0.2s ease;
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                .artist-text {
+                    display: inline-block;
+                    white-space: nowrap;
+                    font-size: 16px;
+                    background: linear-gradient(-125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    background-position: 0% 50%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 12s ease infinite;
+                    transition: opacity 0.2s ease;
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                .song:hover .song-text,
+                .artist:hover .artist-text {
+                    opacity: 0.8;
+                }
+
+                /* --- Marquee: continuous ticker ---
+                   translateX(-50%) gives pixel-perfect loop alignment.
+                   The tiny margin-left change keeps the layout engine
+                   engaged so the browser cannot cull off-screen content
+                   in SVG foreignObject. */
+                .marquee-track {
+                    display: flex;
+                    white-space: nowrap;
+                    width: max-content;
+                    will-change: transform;
+                    backface-visibility: hidden;
+                    justify-content: flex-start;
+                    animation: marquee var(--scroll-duration) linear infinite;
+                }
+
+                .has-marquee .song-text,
+                .has-marquee .artist-text {
+                    filter: none;
+                }
+
+                .marquee-spacer {
+                    flex-shrink: 0;
+                    width: 50px;
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-33.333%);
+                    }
+                }
+
+                .cover {
+                    width: var(--album-size);
+                    height: var(--album-size);
+                    border-radius: var(--border-radius);
+                    object-fit: cover;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                }
+
+                .container.blur-bg .cover {
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+                }
+                
+                /* Add glow effect to album art matching the palette */
+                .container.blur-bg.blur-dark .cover {
+                    box-shadow: 
+                        0 4px 15px rgba(0, 0, 0, 0.4),
+                        0 0 20px var(--bar-glow);
+                }
+
+                /* Spacer reserves vertical space where SVG bars are overlaid */
+                #bars-spacer {
+                    height: var(--eq-spacer-height);
+                    margin-top: var(--eq-spacer-margin-top);
+                    width: 100%;
+                }
+
+                .status {
+                    font-size: 12px;
+                    text-align: center;
+                    margin-bottom: 4px;
+                    opacity: 0.7;
+                    background: linear-gradient(-125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 17s ease infinite;
+                    /* Contrasting outline for legibility */
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                }
+
+                div {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+                }
+
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                
+/* Dark theme specific overrides */
+.song-text {
+    font-weight: 500;
+}
+
+.artist-text {
+    opacity: 0.9;
+}
+
+.cover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+            </style>
+
+            <!-- Blurred background layer -->
+            <div class="blur-background"></div>
+            <div class="blur-overlay"></div>
+
+            <div class="main">
+                <a class="art" href="https://music.apple.com/hk/search?term=%E5%91%A8%E6%9D%B0%E4%BC%A6%20%E6%99%B4%E5%A4%A9" target="_blank" title="Open in music app">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAIAAAAxBA+LAAAI6UlEQVR4nO3VMQEAIAzAMEAZ4icMGRxNFPTrvjMLAKrO7wAA+MkIAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgDSjBCANCMEIM0IAUgzQgBW2QN5bAZ4LHLMIgAAAABJRU5ErkJggg==" class="cover" alt="Album art" />
+                </a>
+
+                <div class="content">
+                    
+                    <a href="https://music.apple.com/hk/search?term=%E5%91%A8%E6%9D%B0%E4%BC%A6%20%E6%99%B4%E5%A4%A9" target="_blank">
+                        <div class="song " title="晴天">
+                            
+                            <span class="song-text">晴天</span>
+                            
+                        </div>
+                    </a>
+                    <a href="https://music.apple.com/hk/search?term=%E5%91%A8%E6%9D%B0%E4%BC%A6" target="_blank">
+                        <div class="artist " title="周杰伦">
+                            
+                            <span class="artist-text">周杰伦</span>
+                            
+                        </div>
+                    </a>
+                    <div id="bars-spacer"></div>
+                </div>
+            </div>
+
+        </div>
+    </foreignObject>
+
+    
+    <g id="bars">
+        <path class="bar" d="M 136.00,128.00 L 136.00,80.97 Q 136.00,79.00 137.97,79.00 L 137.97,79.00 Q 139.95,79.00 139.95,80.97 L 139.95,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 140.95,128.00 L 140.95,80.97 Q 140.95,79.00 142.92,79.00 L 142.92,79.00 Q 144.90,79.00 144.90,80.97 L 144.90,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 145.90,128.00 L 145.90,80.97 Q 145.90,79.00 147.88,79.00 L 147.88,79.00 Q 149.85,79.00 149.85,80.97 L 149.85,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 150.85,128.00 L 150.85,80.97 Q 150.85,79.00 152.82,79.00 L 152.82,79.00 Q 154.80,79.00 154.80,80.97 L 154.80,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 155.80,128.00 L 155.80,80.97 Q 155.80,79.00 157.78,79.00 L 157.78,79.00 Q 159.75,79.00 159.75,80.97 L 159.75,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 160.75,128.00 L 160.75,80.97 Q 160.75,79.00 162.72,79.00 L 162.72,79.00 Q 164.70,79.00 164.70,80.97 L 164.70,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 165.70,128.00 L 165.70,80.97 Q 165.70,79.00 167.67,79.00 L 167.67,79.00 Q 169.65,79.00 169.65,80.97 L 169.65,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 170.65,128.00 L 170.65,80.97 Q 170.65,79.00 172.62,79.00 L 172.62,79.00 Q 174.60,79.00 174.60,80.97 L 174.60,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 175.60,128.00 L 175.60,80.97 Q 175.60,79.00 177.57,79.00 L 177.57,79.00 Q 179.55,79.00 179.55,80.97 L 179.55,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 180.55,128.00 L 180.55,80.97 Q 180.55,79.00 182.53,79.00 L 182.53,79.00 Q 184.50,79.00 184.50,80.97 L 184.50,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 185.50,128.00 L 185.50,80.97 Q 185.50,79.00 187.47,79.00 L 187.47,79.00 Q 189.45,79.00 189.45,80.97 L 189.45,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 190.45,128.00 L 190.45,80.97 Q 190.45,79.00 192.42,79.00 L 192.42,79.00 Q 194.40,79.00 194.40,80.97 L 194.40,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 195.40,128.00 L 195.40,80.97 Q 195.40,79.00 197.38,79.00 L 197.38,79.00 Q 199.35,79.00 199.35,80.97 L 199.35,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 200.35,128.00 L 200.35,80.97 Q 200.35,79.00 202.33,79.00 L 202.33,79.00 Q 204.30,79.00 204.30,80.97 L 204.30,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 205.30,128.00 L 205.30,80.97 Q 205.30,79.00 207.28,79.00 L 207.28,79.00 Q 209.25,79.00 209.25,80.97 L 209.25,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 210.25,128.00 L 210.25,80.97 Q 210.25,79.00 212.22,79.00 L 212.22,79.00 Q 214.20,79.00 214.20,80.97 L 214.20,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 215.20,128.00 L 215.20,80.97 Q 215.20,79.00 217.17,79.00 L 217.17,79.00 Q 219.15,79.00 219.15,80.97 L 219.15,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 220.15,128.00 L 220.15,80.97 Q 220.15,79.00 222.12,79.00 L 222.12,79.00 Q 224.10,79.00 224.10,80.97 L 224.10,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 225.10,128.00 L 225.10,80.97 Q 225.10,79.00 227.08,79.00 L 227.08,79.00 Q 229.05,79.00 229.05,80.97 L 229.05,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 230.05,128.00 L 230.05,80.97 Q 230.05,79.00 232.03,79.00 L 232.03,79.00 Q 234.00,79.00 234.00,80.97 L 234.00,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 235.00,128.00 L 235.00,80.97 Q 235.00,79.00 236.97,79.00 L 236.97,79.00 Q 238.95,79.00 238.95,80.97 L 238.95,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 239.95,128.00 L 239.95,80.97 Q 239.95,79.00 241.92,79.00 L 241.92,79.00 Q 243.90,79.00 243.90,80.97 L 243.90,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 244.90,128.00 L 244.90,80.97 Q 244.90,79.00 246.88,79.00 L 246.88,79.00 Q 248.85,79.00 248.85,80.97 L 248.85,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 249.85,128.00 L 249.85,80.97 Q 249.85,79.00 251.83,79.00 L 251.83,79.00 Q 253.80,79.00 253.80,80.97 L 253.80,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 254.80,128.00 L 254.80,80.97 Q 254.80,79.00 256.78,79.00 L 256.77,79.00 Q 258.75,79.00 258.75,80.97 L 258.75,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 259.75,128.00 L 259.75,80.97 Q 259.75,79.00 261.73,79.00 L 261.72,79.00 Q 263.70,79.00 263.70,80.97 L 263.70,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 264.70,128.00 L 264.70,80.97 Q 264.70,79.00 266.68,79.00 L 266.68,79.00 Q 268.65,79.00 268.65,80.97 L 268.65,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 269.65,128.00 L 269.65,80.97 Q 269.65,79.00 271.62,79.00 L 271.62,79.00 Q 273.60,79.00 273.60,80.97 L 273.60,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 274.60,128.00 L 274.60,80.97 Q 274.60,79.00 276.58,79.00 L 276.57,79.00 Q 278.55,79.00 278.55,80.97 L 278.55,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 279.55,128.00 L 279.55,80.97 Q 279.55,79.00 281.53,79.00 L 281.52,79.00 Q 283.50,79.00 283.50,80.97 L 283.50,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 284.50,128.00 L 284.50,80.97 Q 284.50,79.00 286.48,79.00 L 286.47,79.00 Q 288.45,79.00 288.45,80.97 L 288.45,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 289.45,128.00 L 289.45,80.97 Q 289.45,79.00 291.43,79.00 L 291.43,79.00 Q 293.40,79.00 293.40,80.97 L 293.40,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 294.40,128.00 L 294.40,80.97 Q 294.40,79.00 296.38,79.00 L 296.37,79.00 Q 298.35,79.00 298.35,80.97 L 298.35,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 299.35,128.00 L 299.35,80.97 Q 299.35,79.00 301.33,79.00 L 301.32,79.00 Q 303.30,79.00 303.30,80.97 L 303.30,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 304.30,128.00 L 304.30,80.97 Q 304.30,79.00 306.28,79.00 L 306.27,79.00 Q 308.25,79.00 308.25,80.97 L 308.25,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 309.25,128.00 L 309.25,80.97 Q 309.25,79.00 311.23,79.00 L 311.22,79.00 Q 313.20,79.00 313.20,80.97 L 313.20,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 314.20,128.00 L 314.20,80.97 Q 314.20,79.00 316.18,79.00 L 316.18,79.00 Q 318.15,79.00 318.15,80.97 L 318.15,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 319.15,128.00 L 319.15,80.97 Q 319.15,79.00 321.12,79.00 L 321.12,79.00 Q 323.10,79.00 323.10,80.97 L 323.10,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 324.10,128.00 L 324.10,80.97 Q 324.10,79.00 326.08,79.00 L 326.07,79.00 Q 328.05,79.00 328.05,80.97 L 328.05,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 329.05,128.00 L 329.05,80.97 Q 329.05,79.00 331.03,79.00 L 331.02,79.00 Q 333.00,79.00 333.00,80.97 L 333.00,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 334.00,128.00 L 334.00,80.97 Q 334.00,79.00 335.98,79.00 L 335.97,79.00 Q 337.95,79.00 337.95,80.97 L 337.95,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 338.95,128.00 L 338.95,80.97 Q 338.95,79.00 340.93,79.00 L 340.93,79.00 Q 342.90,79.00 342.90,80.97 L 342.90,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 343.90,128.00 L 343.90,80.97 Q 343.90,79.00 345.88,79.00 L 345.87,79.00 Q 347.85,79.00 347.85,80.97 L 347.85,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 348.85,128.00 L 348.85,80.97 Q 348.85,79.00 350.83,79.00 L 350.82,79.00 Q 352.80,79.00 352.80,80.97 L 352.80,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 353.80,128.00 L 353.80,80.97 Q 353.80,79.00 355.78,79.00 L 355.77,79.00 Q 357.75,79.00 357.75,80.97 L 357.75,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 358.75,128.00 L 358.75,80.97 Q 358.75,79.00 360.73,79.00 L 360.72,79.00 Q 362.70,79.00 362.70,80.97 L 362.70,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 363.70,128.00 L 363.70,80.97 Q 363.70,79.00 365.68,79.00 L 365.68,79.00 Q 367.65,79.00 367.65,80.97 L 367.65,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 368.65,128.00 L 368.65,80.97 Q 368.65,79.00 370.62,79.00 L 370.62,79.00 Q 372.60,79.00 372.60,80.97 L 372.60,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 373.60,128.00 L 373.60,80.97 Q 373.60,79.00 375.58,79.00 L 375.57,79.00 Q 377.55,79.00 377.55,80.97 L 377.55,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 378.55,128.00 L 378.55,80.97 Q 378.55,79.00 380.53,79.00 L 380.52,79.00 Q 382.50,79.00 382.50,80.97 L 382.50,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 383.50,128.00 L 383.50,80.97 Q 383.50,79.00 385.48,79.00 L 385.47,79.00 Q 387.45,79.00 387.45,80.97 L 387.45,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 388.45,128.00 L 388.45,80.97 Q 388.45,79.00 390.43,79.00 L 390.43,79.00 Q 392.40,79.00 392.40,80.97 L 392.40,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 393.40,128.00 L 393.40,80.97 Q 393.40,79.00 395.38,79.00 L 395.38,79.00 Q 397.35,79.00 397.35,80.97 L 397.35,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 398.35,128.00 L 398.35,80.97 Q 398.35,79.00 400.33,79.00 L 400.32,79.00 Q 402.30,79.00 402.30,80.97 L 402.30,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 403.30,128.00 L 403.30,80.97 Q 403.30,79.00 405.28,79.00 L 405.27,79.00 Q 407.25,79.00 407.25,80.97 L 407.25,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 408.25,128.00 L 408.25,80.97 Q 408.25,79.00 410.23,79.00 L 410.22,79.00 Q 412.20,79.00 412.20,80.97 L 412.20,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 413.20,128.00 L 413.20,80.97 Q 413.20,79.00 415.18,79.00 L 415.17,79.00 Q 417.15,79.00 417.15,80.97 L 417.15,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 418.15,128.00 L 418.15,80.97 Q 418.15,79.00 420.13,79.00 L 420.12,79.00 Q 422.10,79.00 422.10,80.97 L 422.10,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 423.10,128.00 L 423.10,80.97 Q 423.10,79.00 425.08,79.00 L 425.07,79.00 Q 427.05,79.00 427.05,80.97 L 427.05,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 428.05,128.00 L 428.05,80.97 Q 428.05,79.00 430.03,79.00 L 430.02,79.00 Q 432.00,79.00 432.00,80.97 L 432.00,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 433.00,128.00 L 433.00,80.97 Q 433.00,79.00 434.98,79.00 L 434.97,79.00 Q 436.95,79.00 436.95,80.97 L 436.95,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 437.95,128.00 L 437.95,80.97 Q 437.95,79.00 439.93,79.00 L 439.92,79.00 Q 441.90,79.00 441.90,80.97 L 441.90,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 442.90,128.00 L 442.90,80.97 Q 442.90,79.00 444.88,79.00 L 444.88,79.00 Q 446.85,79.00 446.85,80.97 L 446.85,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 447.85,128.00 L 447.85,80.97 Q 447.85,79.00 449.83,79.00 L 449.82,79.00 Q 451.80,79.00 451.80,80.97 L 451.80,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 452.80,128.00 L 452.80,80.97 Q 452.80,79.00 454.78,79.00 L 454.77,79.00 Q 456.75,79.00 456.75,80.97 L 456.75,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 457.75,128.00 L 457.75,80.97 Q 457.75,79.00 459.73,79.00 L 459.72,79.00 Q 461.70,79.00 461.70,80.97 L 461.70,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 462.70,128.00 L 462.70,80.97 Q 462.70,79.00 464.68,79.00 L 464.67,79.00 Q 466.65,79.00 466.65,80.97 L 466.65,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 467.65,128.00 L 467.65,80.97 Q 467.65,79.00 469.63,79.00 L 469.62,79.00 Q 471.60,79.00 471.60,80.97 L 471.60,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 472.60,128.00 L 472.60,80.97 Q 472.60,79.00 474.58,79.00 L 474.57,79.00 Q 476.55,79.00 476.55,80.97 L 476.55,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 477.55,128.00 L 477.55,80.97 Q 477.55,79.00 479.53,79.00 L 479.52,79.00 Q 481.50,79.00 481.50,80.97 L 481.50,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 482.50,128.00 L 482.50,80.97 Q 482.50,79.00 484.48,79.00 L 484.47,79.00 Q 486.45,79.00 486.45,80.97 L 486.45,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 487.45,128.00 L 487.45,80.97 Q 487.45,79.00 489.43,79.00 L 489.42,79.00 Q 491.40,79.00 491.40,80.97 L 491.40,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 492.40,128.00 L 492.40,80.97 Q 492.40,79.00 494.38,79.00 L 494.38,79.00 Q 496.35,79.00 496.35,80.97 L 496.35,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 497.35,128.00 L 497.35,80.97 Q 497.35,79.00 499.33,79.00 L 499.32,79.00 Q 501.30,79.00 501.30,80.97 L 501.30,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 502.30,128.00 L 502.30,80.97 Q 502.30,79.00 504.28,79.00 L 504.27,79.00 Q 506.25,79.00 506.25,80.97 L 506.25,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 507.25,128.00 L 507.25,80.97 Q 507.25,79.00 509.23,79.00 L 509.22,79.00 Q 511.20,79.00 511.20,80.97 L 511.20,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 512.20,128.00 L 512.20,80.97 Q 512.20,79.00 514.18,79.00 L 514.18,79.00 Q 516.15,79.00 516.15,80.97 L 516.15,128.00 Z" fill="rgb(67,196,196)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 517.15,128.00 L 517.15,80.97 Q 517.15,79.00 519.13,79.00 L 519.13,79.00 Q 521.10,79.00 521.10,80.97 L 521.10,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 522.10,128.00 L 522.10,80.97 Q 522.10,79.00 524.08,79.00 L 524.08,79.00 Q 526.05,79.00 526.05,80.97 L 526.05,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+<path class="bar" d="M 527.05,128.00 L 527.05,80.97 Q 527.05,79.00 529.02,79.00 L 529.02,79.00 Q 531.00,79.00 531.00,80.97 L 531.00,128.00 Z" fill="rgb(72,195,195)" shape-rendering="geometricPrecision" />
+    </g>
 </svg>
