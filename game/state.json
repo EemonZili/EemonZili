@@ -1,0 +1,70 @@
+{
+  "board": [
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "turn": "cyan",
+  "last": null,
+  "moves": 0,
+  "games": 0,
+  "wins": {
+    "cyan": 0,
+    "violet": 0,
+    "draw": 0
+  },
+  "players": [],
+  "history": [],
+  "result": null
+}
