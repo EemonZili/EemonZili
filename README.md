@@ -11,7 +11,7 @@
 
 🤖 𝑨𝒈𝒆𝒏𝒕𝒔 𝒚𝒐𝒖 𝒄𝒂𝒏 𝒄𝒐𝒏𝒇𝒊𝒈𝒖𝒓𝒆 𝒊𝒏 𝒑𝒍𝒂𝒊𝒏 𝒍𝒂𝒏𝒈𝒖𝒂𝒈𝒆.
 
-## 以前的作品
+## 𝗣𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝗪𝗼𝗿𝗸
 
 [![Campus Review](https://svg.bookmark.style/api?url=https://github.com/EemonZili/AHUComment&mode=light&style=horizontal)](https://github.com/EemonZili/AHUComment)
 [![思想银河](https://svg.bookmark.style/api?url=https://github.com/Duang777/soular&mode=dark&style=horizontal)](https://soular.top/)
