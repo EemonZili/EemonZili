@@ -1,11 +1,18 @@
-<a href="https://github.com/EemonZili">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/EemonZili/EemonZili/main/dark_mode.svg" />
-    <img alt="Eemon's GitHub profile" src="https://raw.githubusercontent.com/EemonZili/EemonZili/main/light_mode.svg" />
-  </picture>
-</a>
+### Eemon
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/EemonZili/EemonZili/output/github-snake-dark.svg" />
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/EemonZili/EemonZili/output/github-snake.svg" />
-</picture>
+Backend and AI agent development.
+
+I work on real-time data pipelines, LLM labeling and evaluation, and agents that can be configured in natural language.
+
+Go · Java · Python · TypeScript  
+Kafka · Redis · MySQL · Doris · Grafana
+
+### Projects
+
+**[Campus Review](https://github.com/EemonZili/AHUComment)**  
+A campus review community: WeChat login, reviews, ratings, comments, and role-based admin.
+
+**[思想银河](https://soular.top/)**  
+A hackathon project that turns answers under one question into a 3D map of viewpoints.
+
+[Blog](https://eemonzili.github.io/)
