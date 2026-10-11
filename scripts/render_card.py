@@ -1,159 +1,114 @@
-"""Render the neofetch-style profile card as light and dark SVGs."""
+"""Render assets/now.svg, a "now building" card in the style of a now-playing widget.
 
-import json
-import os
-import urllib.request
-from html import escape
-from io import BytesIO
+Fonts are subset and embedded because GitHub serves README SVGs as images,
+which cannot load external fonts.
+
+Usage: python scripts/render_card.py <Outfit[wght].ttf> <JetBrainsMono[wght].ttf> <avatar image>
+"""
+import base64
+import io
+import random
+import sys
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageOps
+from fontTools.subset import Options, Subsetter
+from fontTools.ttLib import TTFont
+from fontTools.varLib import instancer
+from PIL import Image
 
-USER = "EemonZili"
-ROOT = Path(__file__).resolve().parent.parent
-
-ASCII_COLS, ASCII_ROWS = 38, 21
-ASCII_CROP = (60, 50, 340, 350)
-RAMP = " .:-=+*#%@"
-
-# Sized for the widest common monospace fallback (Menlo, 0.602em) so nothing overflows.
-FONT_SIZE = 14
-LINE_HEIGHT = 19
-CHAR_WIDTH = FONT_SIZE * 0.602
-PAD = 20
-INFO_WIDTH = 60
-INFO_X = round(PAD + (ASCII_COLS + 3) * CHAR_WIDTH)
-WIDTH = round(INFO_X + INFO_WIDTH * CHAR_WIDTH + PAD)
-TOP = 32
-
-THEMES = {
-    "light": {"bg": "#f6f8fa", "text": "#24292f", "art": "#57606a", "key": "#953800", "value": "#0a3069", "dots": "#c2cfde"},
-    "dark": {"bg": "#161b22", "text": "#c9d1d9", "art": "#8b949e", "key": "#ffa657", "value": "#a5d6ff", "dots": "#616e7f"},
-}
+OUT = Path(__file__).resolve().parent.parent / "assets" / "now.svg"
+W, H = 540, 180
+LABEL = "NOW BUILDING"
+TITLE = "AI Agents & Data Pipelines"
+SUBTITLE = "Eemon · Backend Engineer"
+TAGS = "Go  ·  Java  ·  Python  ·  TypeScript"
 
 
-def api(path):
-    req = urllib.request.Request(f"https://api.github.com{path}", headers={"Accept": "application/vnd.github+json"})
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)
+def font_face(path, family, weight, text):
+    font = TTFont(path)
+    if "fvar" in font:
+        font = instancer.instantiateVariableFont(font, {"wght": weight})
+    opts = Options()
+    opts.flavor = "woff2"
+    opts.layout_features = ["kern", "liga"]
+    sub = Subsetter(opts)
+    sub.populate(text=text)
+    sub.subset(font)
+    buf = io.BytesIO()
+    font.flavor = "woff2"
+    font.save(buf)
+    data = base64.b64encode(buf.getvalue()).decode()
+    return (f"@font-face{{font-family:'{family}';font-weight:{weight};"
+            f"src:url(data:font/woff2;base64,{data}) format('woff2')}}")
 
 
-def stats():
-    user = api(f"/users/{USER}")
-    commits = api(f"/search/commits?q=author:{USER}&per_page=1")["total_count"]
-    return {"repos": user["public_repos"], "commits": commits}
+def avatar_data(path, size):
+    img = Image.open(path).convert("RGB").resize((size, size), Image.LANCZOS)
+    buf = io.BytesIO()
+    img.save(buf, "JPEG", quality=82)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-def ascii_art(avatar_url):
-    with urllib.request.urlopen(avatar_url, timeout=30) as resp:
-        im = Image.open(BytesIO(resp.read())).convert("L").resize((400, 400))
-    im = ImageOps.autocontrast(im.crop(ASCII_CROP), cutoff=3)
-    im = ImageEnhance.Contrast(im).enhance(1.6).resize((ASCII_COLS, ASCII_ROWS))
-    return [
-        "".join(RAMP[int((255 - im.getpixel((x, y))) * (len(RAMP) - 1) / 255)] for x in range(ASCII_COLS))
-        for y in range(ASCII_ROWS)
-    ]
-
-
-def info_lines(s):
-    return [
-        ("title", "eemon@github"),
-        ("kv", "OS", "macOS, Linux"),
-        ("kv", "Role", "Backend & AI Agent Developer"),
-        ("kv", "Focus", "Real-time pipelines, LLM agents"),
-        ("blank",),
-        ("kv", "Languages.Programming", "Go, Java, Python, TypeScript"),
-        ("kv", "Languages.Real", "Chinese, English"),
-        ("kv", "Infra", "Kafka, Redis, MySQL, Doris"),
-        ("kv", "Observability", "Grafana, alerting"),
-        ("blank",),
-        ("kv", "AI.Building", "Auto-labeling, RAG, tool agents"),
-        ("kv", "AI.Learning", "Context engineering, evals"),
-        ("kv", "Hobbies", "Tech books, game prototypes"),
-        ("blank",),
-        ("section", "Contact"),
-        ("kv", "Blog", "eemonzili.github.io"),
-        ("kv", "GitHub", USER),
-        ("blank",),
-        ("section", "GitHub Stats"),
-        ("stats", s),
-    ]
-
-
-def dots(n):
-    return " " + "." * max(n, 2) + " "
-
-
-def render_info(lines):
+def bars(x0, y_base, n=48, width=4, gap=3, max_h=22):
+    rng = random.Random(3)
     out = []
-    for i, line in enumerate(lines):
-        y = TOP + i * LINE_HEIGHT
-        kind = line[0]
-        if kind == "blank":
-            continue
-        if kind == "title":
-            rule = "-" * (INFO_WIDTH - len(line[1]) - 1)
-            out.append(f'<tspan x="{INFO_X}" y="{y}">{escape(line[1])} {rule}</tspan>')
-        elif kind == "section":
-            rule = "-" * (INFO_WIDTH - len(line[1]) - 3)
-            out.append(f'<tspan x="{INFO_X}" y="{y}">- {escape(line[1])} {rule}</tspan>')
-        elif kind == "kv":
-            key, value = line[1], line[2]
-            gap = INFO_WIDTH - 2 - len(key) - 1 - len(value) - 2
-            out.append(
-                f'<tspan x="{INFO_X}" y="{y}" class="cc">. </tspan>'
-                f'<tspan class="key">{escape(key)}</tspan>:'
-                f'<tspan class="cc">{dots(gap)}</tspan>'
-                f'<tspan class="value">{escape(value)}</tspan>'
-            )
-        elif kind == "stats":
-            s = line[1]
-            out.append(
-                f'<tspan x="{INFO_X}" y="{y}" class="cc">. </tspan>'
-                f'<tspan class="key">Repos</tspan>: <tspan class="value">{s["repos"]}</tspan>'
-                f'<tspan class="cc"> | </tspan><tspan class="key">Commits</tspan>: <tspan class="value">{s["commits"]}</tspan>'
-            )
-    return "\n".join(out)
+    for i in range(n):
+        dur = rng.uniform(0.7, 1.5)
+        delay = rng.uniform(0, 1.5)
+        out.append(
+            f'<rect x="{x0 + i * (width + gap)}" y="{y_base - max_h}" width="{width}" height="{max_h}" rx="2" '
+            f'class="bar" style="animation-duration:{dur:.2f}s;animation-delay:-{delay:.2f}s"/>'
+        )
+    return "".join(out)
 
 
-def render(theme, art, lines):
-    c = THEMES[theme]
-    rows = max(len(lines) + 1, ASCII_ROWS)
-    height = TOP + rows * LINE_HEIGHT - LINE_HEIGHT // 2
-    art_top = TOP + (rows - ASCII_ROWS) // 2 * LINE_HEIGHT
-    art_spans = "\n".join(
-        f'<tspan x="{PAD}" y="{art_top + i * LINE_HEIGHT}">{escape(row)}</tspan>' for i, row in enumerate(art)
-    )
-    return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="'SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace" width="{WIDTH}" height="{height}" font-size="{FONT_SIZE}px">
-<style>
-.key {{ fill: {c['key']}; }}
-.value {{ fill: {c['value']}; }}
-.cc {{ fill: {c['dots']}; }}
-.ascii {{ fill: {c['art']}; }}
-text, tspan {{ white-space: pre; }}
-</style>
-<rect width="{WIDTH}" height="{height}" fill="{c['bg']}" rx="12"/>
-<text x="{PAD}" y="{art_top}" class="ascii">
-{art_spans}
-</text>
-<text x="{INFO_X}" y="{TOP}" fill="{c['text']}">
-{render_info(lines)}
-</text>
+def render(outfit, mono, avatar):
+    faces = "".join([
+        font_face(outfit, "Outfit", 600, TITLE),
+        font_face(outfit, "Outfit", 400, SUBTITLE + TAGS),
+        font_face(mono, "JBMono", 500, LABEL),
+    ])
+    pic = avatar_data(avatar, 240)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<defs>
+  <style>{faces}
+    .label{{font:500 11px 'JBMono',ui-monospace,Menlo,monospace;letter-spacing:2.5px;fill:#fff;fill-opacity:.65}}
+    .title{{font:600 26px 'Outfit',-apple-system,'Segoe UI',sans-serif;fill:#fff}}
+    .sub{{font:400 16px 'Outfit',-apple-system,'Segoe UI',sans-serif;fill:#fff;fill-opacity:.8}}
+    .tags{{font:400 13px 'Outfit',-apple-system,'Segoe UI',sans-serif;fill:#fff;fill-opacity:.55}}
+    .bar{{fill:#fff;fill-opacity:.85;transform-box:fill-box;transform-origin:bottom;animation:eq ease-in-out infinite alternate}}
+    @keyframes eq{{0%{{transform:scaleY(.15)}}50%{{transform:scaleY(.6)}}100%{{transform:scaleY(1)}}}}
+  </style>
+  <clipPath id="card"><rect width="{W}" height="{H}" rx="14"/></clipPath>
+  <clipPath id="cover"><rect x="24" y="24" width="132" height="132" rx="10"/></clipPath>
+  <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="28"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<g clip-path="url(#card)">
+  <image href="{pic}" xlink:href="{pic}" x="-40" y="-{(W + 80 - H) // 2}" width="{W + 80}" height="{W + 80}" preserveAspectRatio="xMidYMid slice" filter="url(#blur)"/>
+  <rect width="{W}" height="{H}" fill="#0b0b10" fill-opacity=".55"/>
+  <rect x="24" y="24" width="132" height="132" rx="10" fill="#000" filter="url(#shadow)"/>
+  <image href="{pic}" xlink:href="{pic}" x="24" y="24" width="132" height="132" clip-path="url(#cover)"/>
+  <text x="180" y="44" class="label">{LABEL}</text>
+  <text x="180" y="78" class="title">{TITLE.replace("&", "&amp;")}</text>
+  <text x="180" y="103" class="sub">{SUBTITLE}</text>
+  <text x="180" y="124" class="tags">{TAGS}</text>
+  {bars(180, 156)}
+</g>
+<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".9"/>
 </svg>
-"""
+'''
 
 
-def main():
-    user = api(f"/users/{USER}")
-    art = ascii_art(user["avatar_url"] + "&s=400")
-    lines = info_lines(stats())
-    for theme in THEMES:
-        (ROOT / f"{theme}_mode.svg").write_text(render(theme, art, lines), encoding="utf-8")
+def main(argv):
+    if len(argv) != 4:
+        print(__doc__)
+        return 2
+    OUT.parent.mkdir(exist_ok=True)
+    OUT.write_text(render(*argv[1:]), encoding="utf-8")
+    print(f"{OUT} {OUT.stat().st_size // 1024} KB")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main(sys.argv))
