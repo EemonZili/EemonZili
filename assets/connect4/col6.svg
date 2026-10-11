@@ -3,8 +3,8 @@
 <style>.last{animation:p 1.6s ease-in-out infinite}@keyframes p{50%{opacity:.2}}
 .hint{animation:b 1.8s ease-in-out infinite}@keyframes b{50%{transform:translateY(3px)}}</style>
 <rect x="-20" y="0" width="104" height="436" rx="16" fill="url(#bg)"/>
-<rect x="-20" y="0" width="104" height="40" rx="16" fill="#67e8f9" fill-opacity=".08"/>
+<rect x="-20" y="0" width="104" height="40" rx="16" fill="#c084fc" fill-opacity=".08"/>
 <rect x="-20" y="24" width="104" height="16" fill="#0b1024"/>
-<text x="32" y="27" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#67e8f9" class="hint">▼ 6</text>
+<text x="32" y="27" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#c084fc" class="hint">▼ 6</text>
 <circle cx="32" cy="72" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/><circle cx="32" cy="136" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/><circle cx="32" cy="200" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/><circle cx="32" cy="264" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/><circle cx="32" cy="328" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/><circle cx="32" cy="392" r="24" fill="#05071a" stroke="#8b9cff" stroke-opacity=".22"/>
 </svg>

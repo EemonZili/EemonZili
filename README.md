@@ -26,13 +26,13 @@
 
 <!-- CONNECT4:START -->
 <p align="center">
-  <b>Anyone can play.</b> It's 🔵 <b>Cyan</b>'s turn — click a column to drop a disc.
+  <b>Anyone can play.</b> It's 🟣 <b>Violet</b>'s turn — click a column to drop a disc.
 </p>
 
-<p align="center"><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C1&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col1.svg?v=0" width="9%" alt="Drop in column 1"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C2&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col2.svg?v=0" width="9%" alt="Drop in column 2"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C3&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col3.svg?v=0" width="9%" alt="Drop in column 3"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C4&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col4.svg?v=0" width="9%" alt="Drop in column 4"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C5&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col5.svg?v=0" width="9%" alt="Drop in column 5"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C6&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col6.svg?v=0" width="9%" alt="Drop in column 6"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C7&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col7.svg?v=0" width="9%" alt="Drop in column 7"/></a></p>
+<p align="center"><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C1&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col1.svg?v=1" width="9%" alt="Drop in column 1"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C2&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col2.svg?v=1" width="9%" alt="Drop in column 2"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C3&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col3.svg?v=1" width="9%" alt="Drop in column 3"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C4&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col4.svg?v=1" width="9%" alt="Drop in column 4"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C5&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col5.svg?v=1" width="9%" alt="Drop in column 5"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C6&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col6.svg?v=1" width="9%" alt="Drop in column 6"/></a><a href="https://github.com/EemonZili/EemonZili/issues/new?title=connect4%7Cdrop%7C7&body=Just%20click%20%2A%2ACreate%2A%2A%20%E2%80%94%20the%20bot%20will%20drop%20your%20disc%20and%20close%20this%20issue%20in%20about%20a%20minute."><img src="./assets/connect4/col7.svg?v=1" width="9%" alt="Drop in column 7"/></a></p>
 
 <p align="center">
-  <sub>🎯 0 moves · 🏁 0 games · 👥 0 players · 🔵 0 : 0 🟣</sub>
+  <sub>🎯 1 moves · 🏁 0 games · 👥 1 players · 🔵 0 : 0 🟣</sub>
 </p>
 
 <details>
@@ -40,7 +40,7 @@
 
 | Team | Column | Player |
 | :-- | :-: | :-- |
-| — | — | Be the first! |
+| 🔵 Cyan | 4 | [@EemonZili](https://github.com/EemonZili) |
 
 Clicking a column opens a pre-filled issue. A GitHub Action reads the title, drops the disc, redraws the board and closes the issue.
 
